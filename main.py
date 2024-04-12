@@ -21,8 +21,8 @@ pygame.display.set_caption("Ping Pong")
 # Инициализация переменных для мяча, ракеток и скоростей
 ball_x = SCREEN_WIDTH // 2
 ball_y = SCREEN_HEIGHT // 2
-ball_dx = 5 * random.choice((1, -1))
-ball_dy = 5 * random.choice((1, -1))
+ball_dx = 3 * random.choice((1, -1))
+ball_dy = 3 * random.choice((1, -1))
 
 paddle1_y = (SCREEN_HEIGHT - PADDLE_HEIGHT) // 2
 paddle2_y = (SCREEN_HEIGHT - PADDLE_HEIGHT) // 2
@@ -77,8 +77,8 @@ while running:
     if ball_x + BALL_RADIUS >= SCREEN_WIDTH or ball_x - BALL_RADIUS <= 0:
         ball_x = SCREEN_WIDTH // 2
         ball_y = SCREEN_HEIGHT // 2
-        ball_dx = 5 * random.choice((1, -1))
-        ball_dy = 5 * random.choice((1, -1))
+        ball_dx = 3 * random.choice((1, -1))
+        ball_dy = 3 * random.choice((1, -1))
 
     # Ограничение ракеток в пределах игрового поля
     paddle1_y = max(min(paddle1_y, SCREEN_HEIGHT - PADDLE_HEIGHT), 0)
